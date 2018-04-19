@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import statistics as s
+import itertools as i
+
+_=int(input().strip())
+X=list(map(int,input().strip().split(" ")))
+Y=list(map(int,input().strip().split(" ")))
+S=set()
+
+for i in range(len(X)):
+    S.add(repeat(X[i],Y[i]))
+
+def interq(x,y):
+    if len(y)%2==0:
+        pass
+    else :
+        pass 
+    
+    
+print(S)
