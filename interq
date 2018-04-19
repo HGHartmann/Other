@@ -3,20 +3,20 @@
 import statistics as s
 import itertools as i
 
-_=int(input().strip())
+n=int(input().strip())
 E=list(map(int,input().strip().split(" ")))
 F=list(map(int,input().strip().split(" ")))
-S=set()
+itr=list()
 
-for j in range(len(E)):
-    for k in range(F[j]):
-        S.add(E[j])
-
-def interq(x,y):
-    if len(y)%2==0:
+for j in range(n):
+    for l in range(F[j]):
+        itr.append(E[j])
+        
+def interq(n,e,f):
+    if n%2==0:
         pass
     else :
         pass 
     
     
-print(S)
+print(itr)
