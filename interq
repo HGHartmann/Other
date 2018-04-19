@@ -3,20 +3,29 @@
 import statistics as s
 import itertools as i
 
-n=int(input().strip())
+N=int(input().strip())
 E=list(map(int,input().strip().split(" ")))
 F=list(map(int,input().strip().split(" ")))
-itr=list()
+ITR=list()
 
-for j in range(n):
+
+for j in range(N):
     for l in range(F[j]):
-        itr.append(E[j])
+        ITR.append(E[j])
         
-def interq(n,e,f):
+def interq(itr):
+    itr=sorted(itr)
+    n=len(itr)
     if n%2==0:
-        pass
+        L=itr[:int(n/2)]
+        U=itr[int(n/2):]
     else :
-        pass 
+        med=int(median(itr))
+        m=itr.index(med)
+        L=itr[:m-1]
+        U=itr[m:]
+    Q1=s.median(L)
+    Q2=s.median(U)
+    return(Q2-Q1)
     
-    
-print(itr)
+print(interq(ITR))
