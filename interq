@@ -4,12 +4,13 @@ import statistics as s
 import itertools as i
 
 _=int(input().strip())
-X=list(map(int,input().strip().split(" ")))
-Y=list(map(int,input().strip().split(" ")))
+E=list(map(int,input().strip().split(" ")))
+F=list(map(int,input().strip().split(" ")))
 S=set()
 
-for j in range(len(X)):
-    S.add(i.repeat(X[j],Y[j]))
+for j in range(len(E)):
+    for k in range(F[j]):
+        S.add(E[j])
 
 def interq(x,y):
     if len(y)%2==0:
